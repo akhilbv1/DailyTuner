@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/userslist_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_physicalActivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:text="Physical Activities" />
+
+        <Button
+            android:id="@+id/btn_CollegeActivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="college/Work" />
+
+        <Button
+            android:id="@+id/btn_houseworkActivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="House Work" />
+
+        <Button
+            android:id="@+id/btn_ReadingActivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Reading" />
+
+        <Button
+            android:id="@+id/btn_FamActivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="family and Friends" />
+
+        <Button
+            android:id="@+id/btn_SleepActivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sleep"
+            android:padding="20dp"
+            />
+
+        <Button
+            android:id="@+id/btn_StudyActivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="studying" />
+
+        <Button
+            android:id="@+id/btn_entertainmentActivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="entertainment" />
+
+        <Button
+            android:id="@+id/btn_OtherActivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Other Activities" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+

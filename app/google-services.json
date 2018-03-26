@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "227402471244",
+    "firebase_url": "https://dailytuner-b722c.firebaseio.com",
+    "project_id": "dailytuner-b722c",
+    "storage_bucket": "dailytuner-b722c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227402471244:android:f33f594041b1c6de",
+        "android_client_info": {
+          "package_name": "dailytuner.android.com.dailytuner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227402471244-g1188bn1df1bd34ks6j9q8otbu2jq1lk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA71HBP6_fP83Ww_aZHmrEP2Hm1jkpfFhs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
