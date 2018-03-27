@@ -203,7 +203,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
                     calSet.add(Calendar.DATE, 1);
                 }*/
 
-                setAlarm(calSet,activityStr);
+               // setAlarm(calSet,activityStr);
 
                 String time = localDateFormat.format(calSet.getTime());
 
@@ -250,7 +250,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
                     calSet.add(Calendar.DATE, 1);
                 }*/
 
-                setAlarm(calSet,activityStr);
+                //setAlarm(calSet,activityStr);
 
                 String time = localDateFormat.format(calSet.getTime());
 
@@ -291,7 +291,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
                 "\n\n***\n"
                         + "Alarm is set@ " + targetCal.getTime() + "\n"
                         + "***\n");*/
-
+         Log.i("activityname",""+activtyStr);
         Intent intent = new Intent(getActivity().getBaseContext(), AlarmReceiver.class);
         intent.putExtra("activityName", activtyStr);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getActivity().getBaseContext(), RQS_1, intent, 0);
