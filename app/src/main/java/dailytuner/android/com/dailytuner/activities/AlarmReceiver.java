@@ -15,6 +15,7 @@ import android.support.v4.content.WakefulBroadcastReceiver;
 import android.util.Log;
 
 import dailytuner.android.com.dailytuner.R;
+import es.dmoral.toasty.Toasty;
 
 /**
  * Created by akhil on 21/3/18.
@@ -32,6 +33,8 @@ public class AlarmReceiver extends WakefulBroadcastReceiver {
     public void onReceive(Context arg0, Intent intent) {
 
         this.context = arg0;
+
+        Toasty.success(arg0,"Alarm Set success").show();
 
         String activityName = intent.getStringExtra("activityName");
         long time = intent.getLongExtra("time",0);

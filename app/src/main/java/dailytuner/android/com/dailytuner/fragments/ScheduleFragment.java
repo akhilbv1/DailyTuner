@@ -41,7 +41,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
     private AlertDialog dialog;
     final static int RQS_1 = 1;
     private TimePickerDialog timePickerDialog;
-    boolean isFromOtherFirst;
+    boolean isFromOtherFirst=false;
 
     @Nullable
     @Override
@@ -157,7 +157,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
                 alertDialog(5,30,"Physical Activities");
                 break;
             case R.id.personalLl:
-                openTimePickerDialog(false,"Personal Work");
+                openTimePickerDialog(false,"Schedule");
                 break;
             case R.id.sleepingLl:
                 alertDialog(22,30,"Sleeping");
@@ -170,11 +170,11 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.othersLl:
                 isFromOtherFirst =true;
-                openTimePickerDialogOthers(false,"Other Activities");
+                openTimePickerDialogOthers(false,"Schedule");
                 break;
             case R.id.othersSecondLl:
                 isFromOtherFirst =false;
-                openTimePickerDialogOthers(false,"Other Activities");
+                openTimePickerDialogOthers(false,"Schedule");
                 break;
         }
     }

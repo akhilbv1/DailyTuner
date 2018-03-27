@@ -70,12 +70,11 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
         setSupportActionBar(toolbar);
         setupDrawerToggle();
         userid = getUid();
-        defaultFragment();
         dialog = new ProgressDialog(this);
         dialog.setMessage("loading...");
         dialog.setCancelable(false);
+        defaultFragment();
         getUserDetailsFromFirebase();
-        //new Asyntask().execute();
         Log.i("signout",""+FirebaseAuth.getInstance().getCurrentUser());
         Log.i("userid",""+userid);
     }
