@@ -53,7 +53,7 @@ public class AlarmReceiver extends WakefulBroadcastReceiver {
                 0);
         myNotification = new NotificationCompat.Builder(arg0)
                 .setSmallIcon(R.drawable.ic_app)
-                .setContentTitle("Its time to complete the Activity")
+                .setContentTitle("Its time to start the Activity")
                 .setContentText(activityName)
                 .setLargeIcon(icon)
                 .setTicker("Activity Remainder!")

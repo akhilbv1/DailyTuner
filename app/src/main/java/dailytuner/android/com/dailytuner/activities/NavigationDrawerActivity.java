@@ -30,11 +30,11 @@ import com.google.firebase.database.ValueEventListener;
 
 import dailytuner.android.com.dailytuner.R;
 import dailytuner.android.com.dailytuner.firebase.FirebaseUserTable;
-import dailytuner.android.com.dailytuner.fragments.DailyTunerScheduleFragment;
-import dailytuner.android.com.dailytuner.fragments.DailytunerActivitiesListFragment;
-import dailytuner.android.com.dailytuner.fragments.DailytunerChangePasswordFragment;
+import dailytuner.android.com.dailytuner.fragments.ScheduleFragment;
+import dailytuner.android.com.dailytuner.fragments.ActivitiesListFragment;
+import dailytuner.android.com.dailytuner.fragments.ChangePasswordFragment;
 import dailytuner.android.com.dailytuner.fragments.DashboardFragment;
-import dailytuner.android.com.dailytuner.fragments.EditProfileDetailsFragment;
+import dailytuner.android.com.dailytuner.fragments.EditProfileFragment;
 import dailytuner.android.com.dailytuner.utils.CommonUtils;
 
 /**Created by akhil on 2/2/18.
@@ -103,7 +103,7 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
      */
     private void defaultFragment(){
         setToolbarTitle(getString(R.string.toolbar_title_myactivities));
-        Fragment fragment = new DailytunerActivitiesListFragment();
+        Fragment fragment = new ActivitiesListFragment();
         Bundle args = new Bundle();
         args.putString("userid",userid);
         fragment.setArguments(args);
@@ -136,7 +136,7 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
         switch (item.getItemId()) {
             case R.id.nav_acitvitieslist:
                 setToolbarTitle(getString(R.string.toolbar_title_myactivities));
-                fragment = new DailytunerActivitiesListFragment();
+                fragment = new ActivitiesListFragment();
                 break;
 
             case R.id.dashboard:
@@ -145,19 +145,19 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
                 break;
 
             case R.id.nav_schedule:
-                setToolbarTitle("Scehdule");
-                fragment = new DailyTunerScheduleFragment();
+                setToolbarTitle("Schedule");
+                fragment = new ScheduleFragment();
                 break;
 
             case R.id.nav_edit_profile:
                 setToolbarTitle("Edit Profile");
 
-                fragment = new EditProfileDetailsFragment();
+                fragment = new EditProfileFragment();
                 break;
 
             case R.id.nav_chng_pass:
                 setToolbarTitle(getString(R.string.toolbar_title_change_password));
-               fragment = new DailytunerChangePasswordFragment();
+               fragment = new ChangePasswordFragment();
                 break;
 
             case R.id.nav_signout:

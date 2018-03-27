@@ -34,7 +34,7 @@
     <style name="ButtonStyle">
         <item name="android:layout_margin">20dp</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_height">42dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:background">@android:color/holo_blue_bright</item>
     </style>

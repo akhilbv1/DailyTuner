@@ -31,7 +31,7 @@ import es.dmoral.toasty.Toasty;
 /**Created by akhil on 2/2/18.
  */
 
-public class DailytunerChangePasswordFragment extends Fragment {
+public class ChangePasswordFragment extends Fragment {
 
     //private Toolbar toolbar;
     private TextInputEditText etOldPassword,etNewPassword,etConfNewPassword;
@@ -115,7 +115,7 @@ public class DailytunerChangePasswordFragment extends Fragment {
             CommonUtils.toastMessage(getString(R.string.empty_password),getContext());
         }
         else if(etNewPassword.getText().toString().trim().equals(etConfNewPassword.getText().toString().trim())){
-            //new DailytunerChangePasswordFragment.Asynctask().execute();
+            //new ChangePasswordFragment.Asynctask().execute();
             changePasswordFirebaseAuth();
         }
         else {

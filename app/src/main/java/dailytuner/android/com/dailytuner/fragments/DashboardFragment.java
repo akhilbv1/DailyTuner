@@ -223,7 +223,7 @@ public class DashboardFragment extends Fragment implements OnChartValueSelectedL
         ArrayList<PieEntry> entries = new ArrayList<>();
 
         entries.add(new PieEntry(physicalCount, "Physical Activities"));
-        entries.add(new PieEntry(collegeCount, "College/Work"));
+        entries.add(new PieEntry(collegeCount, "College"));
         entries.add(new PieEntry(houseCount, "House Work"));
         entries.add(new PieEntry(readingCount, "Reading"));
         entries.add(new PieEntry(familyCount, "Family & Friends"));

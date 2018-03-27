@@ -14,7 +14,7 @@ import dailytuner.android.com.dailytuner.utils.CommonUtils;
 
 /*
  *splash screen for the app
-  * respective layout:-splashscreen
+  * respective layout:-activity_splash_screen
  */
 
 public class SplashScreenActivity extends Activity {
@@ -22,7 +22,7 @@ public class SplashScreenActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.splashscreen);
+        setContentView(R.layout.activity_splash_screen);
         int SPLASH_TIME_OUT = 3000;
         new Handler().postDelayed(new Runnable() {
             @Override

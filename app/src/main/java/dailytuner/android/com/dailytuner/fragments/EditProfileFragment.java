@@ -25,7 +25,7 @@ import es.dmoral.toasty.Toasty;
  Created by akhil on 19/3/18.
  */
 
-public class EditProfileDetailsFragment extends Fragment {
+public class EditProfileFragment extends Fragment {
 
     private TextInputEditText etUsername, etEmail, etMobileNum;
     private ProgressDialog dialog;
@@ -41,7 +41,7 @@ public class EditProfileDetailsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_editinfo,container,false);
+        View view = inflater.inflate(R.layout.fragment_edit_profile,container,false);
        /* toolbar = view.findViewById(R.id.toolbar);
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         activity.setSupportActio`Bar(toolbar);

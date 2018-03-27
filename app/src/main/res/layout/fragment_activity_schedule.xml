@@ -82,7 +82,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center|end"
-                android:text="05:30 am - 07:30 am"
+                android:text="05:30 AM - 07:30 AM"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -123,12 +123,13 @@
                 android:layout_marginTop="2.5dp"/>
 
             <TextView
+                android:id="@+id/Txt_personal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|end"
                 android:layout_weight="1"
-                android:gravity="center|end"
-                android:text=""
+                android:gravity="center"
+                android:text="N/A"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -174,101 +175,7 @@
                 android:layout_gravity="center|end"
                 android:layout_weight="1"
                 android:gravity="center|end"
-                android:text="09:30 am - 04:30 pm"
-                android:textColor="@android:color/black"
-                android:textSize="16sp" />
-
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.6dp"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:background="@android:color/darker_gray" />
-
-        <LinearLayout
-            android:id="@+id/studyingLl"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:padding="7dp"
-            android:background="?attr/selectableItemBackground"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|start"
-                android:layout_weight="1"
-                android:gravity="start|center"
-                android:text="Studying"
-                android:textColor="@android:color/black"
-                android:textSize="16sp" />
-
-            <View
-                android:layout_width="12dp"
-                android:layout_height="1dp"
-                android:layout_gravity="center"
-                android:background="@android:color/black"
-                android:layout_marginTop="2.5dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|end"
-                android:layout_weight="1"
-                android:gravity="center|end"
-                android:text="06:30 pm - 07:30 pm"
-                android:textColor="@android:color/black"
-                android:textSize="16sp" />
-
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.6dp"
-            android:layout_gravity="center"
-            android:background="@android:color/darker_gray"
-            android:layout_margin="5dp"/>
-
-        <LinearLayout
-            android:id="@+id/sleepingLl"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:padding="7dp"
-            android:background="?attr/selectableItemBackground"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|start"
-                android:layout_weight="1"
-                android:gravity="start|center"
-                android:text="Sleeping"
-                android:textColor="@android:color/black"
-                android:textSize="16sp" />
-
-            <View
-                android:layout_width="12dp"
-                android:layout_height="1dp"
-                android:layout_gravity="center"
-                android:background="@android:color/black"
-                android:layout_marginTop="2.5dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|end"
-                android:layout_weight="1"
-                android:gravity="center|end"
-                android:text="10:30 pm - 05:00 am"
+                android:text="09:30 AM - 04:30 PM"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -310,14 +217,64 @@
                 android:layout_marginTop="2.5dp"/>
 
             <TextView
+                android:id="@+id/Txt_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="N/A"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/studyingLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="7dp"
+            android:background="?attr/selectableItemBackground"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_weight="1"
+                android:gravity="start|center"
+                android:text="Studying"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="@android:color/black"
+                android:layout_marginTop="2.5dp"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|end"
                 android:layout_weight="1"
                 android:gravity="center|end"
-                android:text=""
+                android:text="06:30 PM - 07:30 PM"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
+
 
         </LinearLayout>
 
@@ -327,6 +284,104 @@
             android:layout_gravity="center"
             android:background="@android:color/darker_gray"
             android:layout_margin="5dp"/>
+        <LinearLayout
+            android:id="@+id/othersSecondLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="7dp"
+            android:background="?attr/selectableItemBackground"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_weight="1"
+                android:gravity="start|center"
+                android:text="Others"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="@android:color/black"
+                android:layout_marginTop="2.5dp"/>
+
+            <TextView
+                android:id="@+id/othersSecondTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="N/A"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_gravity="center"
+            android:background="@android:color/darker_gray"
+            android:layout_margin="5dp"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/sleepingLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="7dp"
+            android:background="?attr/selectableItemBackground"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_weight="1"
+                android:gravity="start|center"
+                android:text="Sleeping"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="@android:color/black"
+                android:layout_marginTop="2.5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_weight="1"
+                android:gravity="center|end"
+                android:text="10:30 PM - 05:00 AM"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_gravity="center"
+            android:background="@android:color/darker_gray"
+            android:layout_margin="5dp"/>
+
+
     </LinearLayout>
 
 </LinearLayout>

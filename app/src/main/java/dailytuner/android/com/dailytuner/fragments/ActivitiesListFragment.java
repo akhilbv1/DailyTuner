@@ -19,7 +19,7 @@ import dailytuner.android.com.dailytuner.R;
  */
 
 public class
-DailytunerActivitiesListFragment extends Fragment implements View.OnClickListener {
+ActivitiesListFragment extends Fragment implements View.OnClickListener {
     /*    private List<EntityActivitiesListPojo> mList = new ArrayList<>();
         private RecyclerView recyclerView;
         private ActivitiesListAdapter activitiesListAdapter;*/

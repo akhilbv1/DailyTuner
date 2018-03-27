@@ -12,13 +12,13 @@
     <string name="user_reigistered_success">User Registered Successfully</string>
 
     <!--Strings related to validations -->
-    <string name="empty_username">please Enter User Name</string>
-    <string name="empty_email">please Enter Email</string>
+    <string name="empty_username">Please Enter User Name</string>
+    <string name="empty_email">Please Enter Email</string>
     <string name="email">Email Address</string>
-    <string name="empty_email_register">please Enter Registered Email</string>
-    <string name="empty_mobile_num">please Enter MobileNumber</string>
-    <string name="empty_password">please Enter Password</string>
-    <string name="empty_confpassword">please Enter Confirm Password</string>
+    <string name="empty_email_register">Please Enter Registered Email</string>
+    <string name="empty_mobile_num">Please Enter MobileNumber</string>
+    <string name="empty_password">Please Enter Password</string>
+    <string name="empty_confpassword">Please Enter Confirm Password</string>
     <string name="check_passwords">Passwords do not match</string>
     <string name="validation_email">Please enter valid Email</string>
     <string name="validation_mobilenum">Mobile number should be minimum 10 digits</string>

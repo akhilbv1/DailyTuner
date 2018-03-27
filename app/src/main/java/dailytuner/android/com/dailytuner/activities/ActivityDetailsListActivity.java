@@ -100,6 +100,10 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
     TextView textAlarmPrompt;
     TimePickerDialog timePickerDialog;
 
+    private int Year=0;
+    private int month=0;
+    private int day =0;
+
     final static int RQS_1 = 1;
 
 
@@ -302,7 +306,9 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
         timeTv = dialogView.findViewById(R.id.timeTv);
 
         final Switch remainderSwitch = dialogView.findViewById(R.id.remainderSwitch);
+        final Button addBtn = dialogView.findViewById(R.id.addBtn);
 
+        final Button cancelBtn = dialogView.findViewById(R.id.cancelBtn);
         remainderSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -322,6 +328,15 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
             }
         });
 
+        if (isFromAdapter){
+            addBtn.setText("Update");
+
+        }
+        else
+        {
+            addBtn.setText("ADD");
+
+        }
 
         activityDateEt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -340,10 +355,13 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
                     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                         Calendar newDate = Calendar.getInstance();
                         newDate.set(year, monthOfYear, dayOfMonth);
-
-
                         activityDateEt.setText(dateFormatter.format(newDate.getTime()));
-
+                        Year = year;
+                        month = monthOfYear;
+                        day = dayOfMonth;
+                        Log.i("year",""+year);
+                        Log.i("month",""+monthOfYear);
+                        Log.i("dayofMonth",""+dayOfMonth);
                         //String startDateStr = dateFormatter.format(newDate.getTime());
 
                     }
@@ -358,9 +376,7 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
         });
 
 
-        final Button addBtn = dialogView.findViewById(R.id.addBtn);
 
-        final Button cancelBtn = dialogView.findViewById(R.id.cancelBtn);
 
         //final boolean bool = Utils.isValidEmail(registeredEmailEt.getText().toString());
 
@@ -386,6 +402,7 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
                     if (isFromAdapter) {
                         Log.i("from_adapter", "adpter:" + isFromAdapter);
                         updateActivitiesFirebase(activityid);
+
                         //new UpdateAsyntask(activityid).execute();
                         finish();
                         startActivity(getIntent());
@@ -415,7 +432,7 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
 
     }
 
-    private void setAlarms(String time) {
+   /* private void setAlarms(String time) {
         Calendar c = Calendar.getInstance();
         Log.i("date",""+time);
         SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
@@ -451,7 +468,7 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
 
 
     }
-
+*/
     private void startTimePicker(final TextView timeTv, final Switch reminderSwitch) {
 
         TimePickerDialog startTimePickerDialog = new TimePickerDialog(this,
@@ -510,7 +527,7 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
     }
 
     private void openTimePickerDialog(boolean is24r) {
-        Calendar calendar = Calendar.getInstance();
+        final Calendar calendar = Calendar.getInstance();
         final SimpleDateFormat localDateFormat = new SimpleDateFormat("HH:mm");
         TimePickerDialog.OnTimeSetListener onTimeSetListener
                 = new TimePickerDialog.OnTimeSetListener() {
@@ -520,16 +537,22 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
 
                 Calendar calNow = Calendar.getInstance();
                 Calendar calSet = (Calendar) calNow.clone();
+                Log.i("hour",""+hourOfDay);
+                Log.i("hour",""+minute);
 
+
+                calSet.set(Calendar.YEAR,Year);
+                calSet.set(Calendar.MONTH,month);
+                calSet.set(Calendar.DAY_OF_MONTH,day);
                 calSet.set(Calendar.HOUR_OF_DAY, hourOfDay);
                 calSet.set(Calendar.MINUTE, minute);
                 calSet.set(Calendar.SECOND, 0);
                 calSet.set(Calendar.MILLISECOND, 0);
 
-                if (calSet.compareTo(calNow) <= 0) {
+               /* if (calSet.compareTo(calNow) <= 0) {
                     //Today Set time passed, count to tomorrow
                     calSet.add(Calendar.DATE, 1);
-                }
+                }*/
 
                 setAlarm(calSet);
 
@@ -558,6 +581,7 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
                 "\n\n***\n"
                         + "Alarm is set@ " + targetCal.getTime() + "\n"
                         + "***\n");*/
+       Log.i("dateAndtime",""+targetCal.getTimeInMillis());
 
         Intent intent = new Intent(getBaseContext(), AlarmReceiver.class);
         intent.putExtra("activityName", activityNmEt.getText().toString().trim());
@@ -605,7 +629,6 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
                 }
             });
 
-            setAlarms(timeTv.getText().toString().trim());
 
         }
     }
@@ -685,7 +708,6 @@ public class ActivityDetailsListActivity extends AppCompatActivity {
                 }
             }
         });
-        setAlarms(timeTv.getText().toString().trim());
     }
 
     private void deleteActivityFromFirebase(String activityID) {

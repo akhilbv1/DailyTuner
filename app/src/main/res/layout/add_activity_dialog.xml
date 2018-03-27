@@ -141,7 +141,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:background="?android:attr/selectableItemBackground"
-            android:text="ADD"
             android:textAllCaps="false"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary" />
